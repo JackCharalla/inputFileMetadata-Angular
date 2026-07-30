@@ -1,6 +1,14 @@
 {
   "name": "input-file-metadata",
   "version": "0.0.1",
+  "description": "Componente  de Angular para cargar archivos y capturar metadatos asociados.",
+  "keywords": ["angular", "input-file", "input-file-metadata", "metadata", "file-upload"],
+  "author": "Jack Charalla <jcharalla@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JackCharalla/inputFileMetadata-Angular.git"
+  },
   "peerDependencies": {
     "@angular/common": "^22.0.0",
     "@angular/core": "^22.0.0"
