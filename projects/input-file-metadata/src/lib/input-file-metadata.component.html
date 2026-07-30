@@ -1,0 +1,55 @@
+<div class="ifm-wrapper" (click)="onWrapperClick()">
+  <!-- Input de archivo principal, oculto -->
+  <input type="file" #fileInput (change)="onFileChange($event)" style="display: none;">
+  
+  <span class="ifm-display" [style.color]="isBold ? '#0d6efd' : '#495057'" [style.fontWeight]="isBold ? 'bold' : 'normal'">
+    {{ displayName }}
+  </span>
+
+  <!-- Inputs ocultos para que el componente funcione con formularios normales (FormData) -->
+  <ng-container *ngIf="metadata">
+    <input type="hidden" [name]="name + '_title'" [value]="metadata.titulo">
+    <input type="hidden" [name]="name + '_desc'" [value]="metadata.descripcion">
+    <input type="hidden" [name]="name + '_fecha'" [value]="metadata.fecha">
+    <input type="hidden" [name]="name + '_nombreOriginal'" [value]="metadata.nombreOriginal">
+    <input type="hidden" [name]="name + '_extension'" [value]="metadata.extension">
+    <input type="hidden" [name]="name + '_size'" [value]="metadata.size">
+  </ng-container>
+</div>
+
+<!-- Modal -->
+<div class="ifm-modal-container" *ngIf="showModal">
+  <div class="ifm-modal-dialog">
+    <div class="ifm-modal-header">
+      <h5>Detalles del Archivo</h5>
+      <button type="button" class="ifm-close-btn" (click)="closeModal()">&times;</button>
+    </div>
+    
+    <div class="ifm-modal-body">
+      <div class="ifm-group">
+        <label>Título:</label>
+        <!-- En Angular se asume que FormsModule está importado si usas ngModel -->
+        <input type="text" [(ngModel)]="modalTitle" [class.error]="titleError" placeholder="Ingrese un título...">
+      </div>
+      
+      <div class="ifm-group">
+        <label>Descripción:</label>
+        <textarea [(ngModel)]="modalDesc" [class.error]="descError" rows="3" placeholder="Ingrese una descripción..."></textarea>
+      </div>
+      
+      <div class="ifm-group">
+        <label>Archivo:</label>
+        <input type="file" #modalFileInput [class.error-text]="fileError">
+      </div>
+      
+      <div *ngIf="titleError || descError || fileError" class="ifm-error-msg">
+        Todos los campos son obligatorios.
+      </div>
+    </div>
+    
+    <div class="ifm-modal-footer">
+      <button type="button" class="ifm-cancel-btn" (click)="closeModal()">Cancelar</button>
+      <button type="button" class="ifm-accept-btn" (click)="acceptModal()">Aceptar</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,169 @@
+.ifm-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid #ced4da;
+  padding: 10px 20px;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+  min-width: 150px;
+  text-align: center;
+  font-family: system-ui, -apple-system, sans-serif;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.ifm-wrapper:hover {
+  background-color: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.ifm-display {
+  font-size: 1rem;
+}
+
+.ifm-modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999999;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.ifm-modal-dialog {
+  background: #fff;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.ifm-modal-header {
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ifm-modal-header h5 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #212529;
+}
+
+.ifm-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+  color: #6c757d;
+}
+
+.ifm-modal-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ifm-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ifm-group label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #212529;
+}
+
+.ifm-group input[type="text"],
+.ifm-group textarea {
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  font-family: inherit;
+}
+
+.ifm-group input[type="text"]:focus,
+.ifm-group textarea:focus {
+  border-color: #86b7fe;
+}
+
+.ifm-group input.error,
+.ifm-group textarea.error {
+  border-color: #dc3545;
+}
+
+.ifm-group input[type="file"] {
+  font-size: 0.95rem;
+  padding: 4px 0;
+}
+
+.error-text {
+  color: #dc3545;
+}
+
+.ifm-error-msg {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 5px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.ifm-modal-footer {
+  padding: 16px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.ifm-cancel-btn {
+  padding: 6px 14px;
+  border: 1px solid #6c757d;
+  background: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #6c757d;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.ifm-cancel-btn:hover {
+  background: #6c757d;
+  color: #fff;
+}
+
+.ifm-accept-btn {
+  padding: 6px 14px;
+  border: 1px solid #0d6efd;
+  background: #0d6efd;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.ifm-accept-btn:hover {
+  background: #0b5ed7;
+}
