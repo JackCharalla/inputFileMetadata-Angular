@@ -155,8 +155,8 @@
 
 .ifm-accept-btn {
   padding: 6px 14px;
-  border: 1px solid #0d6efd;
-  background: #0d6efd;
+  border: 1px solid #6e001d;
+  background: #6e001d;
   color: #fff;
   border-radius: 4px;
   cursor: pointer;
@@ -165,5 +165,5 @@
 }
 
 .ifm-accept-btn:hover {
-  background: #0b5ed7;
+  background: #8a0024;
 }
